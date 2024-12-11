@@ -13,6 +13,8 @@ const app = express();
 
 // Middleware
 app.use(cors());
+// allow all the origins
+app.use(cors({ origin: "*" }));
 app.use(cors({ origin: "http://localhost:3000" })); // Replace with your frontend URL
 app.use(express.json());
 
