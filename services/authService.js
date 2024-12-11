@@ -8,7 +8,7 @@ const loginUser = async (email, password) => {
     throw new Error("Invalid credentials");
   }
 
-  const isMatch = await bcryptjs.compare(password, user.password);
+  const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) {
     throw new Error("Invalid credentials");
   }
