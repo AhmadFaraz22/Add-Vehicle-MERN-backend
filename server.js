@@ -15,7 +15,7 @@ const app = express();
 app.use(cors());
 // allow all the origins
 app.use(cors({ origin: "*" }));
-app.use(cors({ origin: "http://localhost:3000" })); // Replace with your frontend URL
+app.use(cors({ origin: "http://localhost:3000" , "https://add-vehicle-frontend.vercel.app"})); // Replace with your frontend URL
 app.use(express.json());
 
 // Serve static files (uploads)
