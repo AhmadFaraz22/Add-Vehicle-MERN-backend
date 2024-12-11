@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/userModel");
 
@@ -8,7 +8,7 @@ const loginUser = async (email, password) => {
     throw new Error("Invalid credentials");
   }
 
-  const isMatch = await bcrypt.compare(password, user.password);
+  const isMatch = await bcryptjs.compare(password, user.password);
   if (!isMatch) {
     throw new Error("Invalid credentials");
   }
