@@ -5,6 +5,7 @@ const saveVehicle = async ({ userId, model, price, phone, city, images }) => {
     throw new Error("All fields are required");
   }
 
+
   const newVehicle = new Vehicle({
     user: userId,
     model,

@@ -13,6 +13,7 @@ const app = express();
 
 // Middleware
 app.use(cors());
+app.use(cors({ origin: "http://localhost:3000" })); // Replace with your frontend URL
 app.use(express.json());
 
 // Serve static files (uploads)
