@@ -5,6 +5,7 @@ function verifyToken(req, res, next) {
   if (!token) return res.status(403).json({ message: "Access denied" });
 
   try {
+    //jwt
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = decoded;
     next();
